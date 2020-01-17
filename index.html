@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>welcome to dusk home</title>
+	<meta name="keywords" content="年少的黄昏">
+	<meta name="description" content="或许就是这样为了生存，而一点一点忘了最初的本意。">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="shortcut icon" href="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2481020200,876491849&fm=26&gp=0.jpg">
+	<link rel="stylesheet" href="css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="css/noscript.css" />
+	</noscript>
+</head>
+
+<body onselectstart="return false" oncontextmenu=self.event.returnValue=false>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2481020200,876491849&fm=26&gp=0.jpg">
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>dusk</h1>
+					<p>
+						<div id="chakhsu" style="text-align:center;color:green"></div>
+						<div id="supper"></div>
+					</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">
+							<i class="fa fa-home"></i>首页
+						</a>
+						</li>
+					<li>
+						<a href="https://youjuantao.vip" target="_blank">
+							<i class="fa fa-heart-o"></i>淘宝券
+						</a>
+					</li>
+					<li>
+						<a href="https://shop.ixiaocong.net/#/index/SUFRQA" target="_blank">
+							<i class="fa fa-heart-o"></i>京东券
+						</a>
+					</li>
+					<li>
+						<a href="https://p.pinduoduo.com/XmFrEdc2" target="_blank">
+							<i class="fa fa-heart-o"></i>拼多多
+						</a>
+					</li>
+					<li>
+						<a href="email:static@tom.com" target="_blank">
+							<i class="fa fa-envelope"></i>待开发
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">
+				©2018-2020 Reself
+			</p>
+		</footer>
+	</div>
+	<!-- BG -->
+	<div id="bg"></div>
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdn.mom1.cn/1/su.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			var supper = $('#supper');
+			$('body').wpSuperSnow({
+				flakes: ['https://cdn.mom1.cn/1/008.png', 'https://cdn.mom1.cn/1//008.png', 'https://cdn.mom1.cn/1//004.png', 'https://cdn.mom1.cn/1/002.png', 'https://cdn.mom1.cn/1/008.png', 'https://cdn.mom1.cn/1/003.png', 'https://cdn.mom1.cn/1/008.png', 'https://cdn.mom1.cn/1/008.png',],
+				totalFlakes: '90',
+				zIndex: '999999',
+				maxSize: '30',
+				maxDuration: '20',
+				useFlakeTrans: false
+			});
+			$.ajax({
+				type: 'get',
+				url: 'https://api.han8.net/api/ian',
+				data: {
+					type: 'json'
+				},
+				dataType: 'json',
+				success: function(res) {
+					if (res.code == 1) {
+						supper.text(res.ishan)
+					}
+				},
+				error: function(error) {
+					supper.text('也许，只有真正动心了。才会为他所做的一件小事在旁人看来无所谓，而在她看来却是心碎。')
+				}
+			})
+		})
+	</script>
+	<script type="text/javascript">
+		var script = document.createElement('script');
+		var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+		script.src = cnzz_protocol + 's4.cnzz.com/z_stat.php?id=1278582073';
+		script.type = 'text/javascript';
+		document.body.appendChild(script)
+	</script>
+</body>
+
+</html>
